@@ -1,4 +1,9 @@
 <?php
+# @Date:   2019-11-18T18:23:18+00:00
+# @Last modified time: 2019-11-28T19:47:18+00:00
+
+
+
 
 namespace App\Http\Controllers;
 
@@ -15,7 +20,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return new CommentsResource(Comment::with(['author'])->paginate());
+      //return new CommentsResource(Comment::with(['author'])->paginate())
+        //return new CommentsResource(Comment::with(['author']);
     }
     /**
      * Show the form for creating a new resource.

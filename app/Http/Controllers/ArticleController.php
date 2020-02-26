@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-17T19:00:23+00:00
-# @Last modified time: 2019-11-18T17:49:25+00:00
+# @Last modified time: 2019-11-28T19:50:04+00:00
 
 
 
@@ -21,7 +21,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return new ArticlesResource(Article::with(['author', 'comments.author'])->paginate());
+        //return new ArticlesResource(Article);
+        //return new ArticlesResource(Article::with(['author', 'comments.author']));
+        return new ArticlesResource(Article::with(['author', 'comments.author'])->get());
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-17T18:59:55+00:00
-# @Last modified time: 2019-11-17T19:23:44+00:00
+# @Last modified time: 2020-02-26T18:39:20+00:00
 
 
 
@@ -24,6 +24,7 @@ class CreateArticlesTable extends Migration
             $table->bigInteger('author_id')->unsigned();
             $table->string('title');
             $table->string('description');
+            $table->LONGTEXT('detailedDesc');
             $table->string('url');
             $table->string('urlToImage');
             $table->string('publishedAt');

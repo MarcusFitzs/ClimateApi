@@ -1,6 +1,6 @@
 <?php
 # @Date:   2019-11-17T19:49:00+00:00
-# @Last modified time: 2019-11-19T20:52:42+00:00
+# @Last modified time: 2020-02-26T18:30:10+00:00
 
 
 
@@ -20,30 +20,22 @@ class ArticleResource extends Resource
      */
     public function toArray($request)
     {
-        // return [
-        //     'type'          => 'articles',
-        //     'id'            => (string)$this->id,
-        //     'url' => $this->url,
-        //     'attributes'    => [
-        //         'title' => $this->title,
-        //         'url' => $this->url,
-        //     ],
-        //     'relationships' => new ArticleRelationshipResource($this),
-        //     'links'         => [
-        //         'self' => route('articles.show', ['article' => $this->id]),
-        //     ],
-        // ];
+
 
         return [
-            'id' => $this->id,
-            'name' => $this->name,
-            'author' => null,
-            'title' => $this->title,
-            'description' => $this->description,
-            'url' => $this->url,
-            'urlToImage' => null,
-            'publishedAt' => $this->created_at,
-            'content' => null
+            'source' => [
+              'id' => $this->id,
+              'name' => $this->name
+            ],
+              'author' => null,
+              'title' => $this->title,
+              'description' => $this->description,
+              'detailedDesc' => $this->detailedDesc,
+              'url' => $this->url,
+              'urlToImage' => null,
+              'publishedAt' => $this->publishedAt,
+              'content' => null
+          //]
         ];
     }
 }
